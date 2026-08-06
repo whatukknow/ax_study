@@ -1,0 +1,13 @@
+[project]
+name = "02_python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "whatuknow", email = "csong1501@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=2.0.2",
+    "pandas>=2.3.3",
+]
