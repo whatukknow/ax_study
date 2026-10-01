@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴마커스 제품구매</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+        }
+
+        /* 상단 메뉴 */
+        .top-menu {
+            display: flex;
+            justify-content: space-around;
+            padding: 14px 5px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .top-menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        /* 메인 배너 공통 */
+        .banner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .banner img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-text {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            color: white;
+        }
+
+        .banner-text h2 {
+            margin: 0 0 8px;
+            font-size: 25px;
+        }
+
+        .banner-text p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* 메인 배너 1 */
+        .banner1 {
+            width: 100%;
+            height: 600px;
+        }
+
+        /* 배너 2 + 3 */
+        .sub-banner-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .banner2 {
+            width: 50%;
+            height: 300px;
+        }
+
+        .banner3 {
+            width: 50%;
+            height: 300px;
+        }
+
+        /* 카테고리 */
+        .category-title {
+            padding: 30px 15px 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .category {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px 5px;
+            padding: 20px 10px 30px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .category a {
+            color: #333;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 8px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .category-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 상품 제목 */
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px 20px;
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 21px;
+        }
+
+        .section-title a {
+            color: #777;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* 상품 */
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 15px;
+            padding: 0 15px 30px;
+        }
+
+        .product img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        .price {
+            margin: 12px 0 5px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .product-name {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .review {
+            margin-top: 7px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* 더보기 버튼 */
+        .more-button {
+            display: block;
+            width: calc(100% - 30px);
+            margin: 0 auto 40px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <h1>NEWMARKERS</h1>
+
+        <div class="header-right">
+            <span>☰</span>
+            <span>🔍</span>
+            <span>🛒</span>
+        </div>
+
+    </header>
+
+
+    <!-- 상단 메뉴 -->
+    <nav class="top-menu">
+
+        <a href="#">제품 구매</a>
+        <a href="#">질문과 답변</a>
+        <a href="#">구매후기</a>
+        <a href="#">고객센터</a>
+
+    </nav>
+
+
+    <!-- 메인 배너 1 -->
+    <section class="banner banner1">
+
+        <img
+            src="https://picsum.photos/1600/700?random=10"
+            alt="메인배너1">
+
+        <div class="banner-text">
+
+            <h2>NEW MARKERS</h2>
+
+            <p>
+                새로운 공간을 만드는<br>
+                특별한 디자인
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 메인 배너 2 + 3 -->
+    <div class="sub-banner-container">
+
+        <!-- 배너 2 -->
+        <section class="banner banner2">
+
+            <img
+                src="https://picsum.photos/800/500?random=20"
+                alt="메인배너2">
+
+            <div class="banner-text">
+
+                <h2>에어간판</h2>
+
+                <p>
+                    매장을 더욱 돋보이게 만드는<br>
+                    다양한 에어간판
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 배너 3 -->
+        <section class="banner banner3">
+
+            <img
+                src="https://picsum.photos/800/500?random=30"
+                alt="메인배너3">
+
+            <div class="banner-text">
+
+                <h2>현수막 & 배너</h2>
+
+                <p>
+                    원하는 디자인을<br>
+                    간편하게 제작하세요
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- 제품 카테고리 -->
+    <h2 class="category-title">제품 구매</h2>
+
+
+    <section class="category">
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=41" alt="에어간판">
+            </div>
+            에어간판
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=42" alt="실사출력">
+            </div>
+            실사출력
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=43" alt="현수막 배너">
+            </div>
+            현수막&배너
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=44" alt="인쇄홍보물">
+            </div>
+            인쇄홍보물
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=45" alt="대량발주">
+            </div>
+            대량발주
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=46" alt="기획상품">
+            </div>
+            기획상품
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=47" alt="마켓">
+            </div>
+            마켓
+        </a>
+
+
+        <a href="#">
+            <div class="category-icon">
+                <img src="https://picsum.photos/100?random=48" alt="개인결제">
+            </div>
+            개인결제
+        </a>
+
+    </section>
+
+
+    <!-- 베스트 상품 -->
+    <section>
+
+        <div class="section-title">
+
+            <h2>베스트상품</h2>
+
+            <a href="#">더보기 &gt;</a>
+
+        </div>
+
+
+        <div class="product-container">
+
+            <!-- 상품 1 -->
+            <div class="product">
+
+                <img
+                    src="https://picsum.photos/600?random=51"
+                    alt="LED 유선 에어간판">
+
+                <p class="price">110,000원 ~</p>
+
+                <p class="product-name">
+                    LED 유선 에어간판 완제품
+                </p>
+
+                <p class="review">
+                    ★★★★★ 2,052 리뷰
+                </p>
+
+            </div>
+
+
+            <!-- 상품 2 -->
+            <div class="product">
+
+                <img
+                    src="https://picsum.photos/600?random=52"
+                    alt="에어간판 천갈이">
+
+                <p class="price">39,000원 ~</p>
+
+                <p class="product-name">
+                    에어간판 천갈이
+                </p>
+
+                <p class="review">
+                    ★★★★★ 1,742 리뷰
+                </p>
+
+            </div>
+
+
+            <!-- 상품 3 -->
+            <div class="product">
+
+                <img
+                    src="https://picsum.photos/600?random=53"
+                    alt="포맥스 제작">
+
+                <p class="price">8,500원 ~</p>
+
+                <p class="product-name">
+                    포맥스 제작 3T 벽메뉴판
+                </p>
+
+                <p class="review">
+                    ★★★★★ 365 리뷰
+                </p>
+
+            </div>
+
+
+            <!-- 상품 4 -->
+            <div class="product">
+
+                <img
+                    src="https://picsum.photos/600?random=54"
+                    alt="배너게시대">
+
+                <p class="price">11,000원 ~</p>
+
+                <p class="product-name">
+                    배너게시대
+                </p>
+
+                <p class="review">
+                    ★★★★★ 775 리뷰
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="more-button">
+            베스트상품 더보기
+        </button>
+
+    </section>
+
+
+    <!-- 추천 상품 -->
+    <section>
+
+        <div class="section-title">
+
+            <h2>추천상품</h2>
+
+            <a href="#">더보기 &gt;</a>
+
+        </div>
+
+
+        <div class="product-container">
+
+            <div class="product">
+
+                <img
+                    src="https://picsum.photos/600?random=61"
+                    alt="투명시트지">
+
+                <p class="price">8,800원 ~</p>
+
+                <p class="product-name">
+                    투명시트지 필름 제작
+                </p>
+
+            </div>
+
+
+            <div class="product">
+
+                <img
+                    src="https://picsum.photos/600?random=62"
+                    alt="생일 현수막">
+
+                <p class="price">13,200원 ~</p>
+
+                <p class="product-name">
+                    생일 현수막 제작
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

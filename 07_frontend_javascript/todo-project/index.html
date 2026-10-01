@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TODO 리스트</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/todo.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- =========================
+             상단 제목
+        ========================== -->
+        <header class="header">
+            <h1>할일 등록</h1>
+        </header>
+
+
+        <!-- =========================
+             Todo 입력 영역
+        ========================== -->
+        <section class="todo-form">
+
+            <!-- 날짜 -->
+            <div class="form-row">
+                <label for="todoDate">날짜</label>
+
+                <input
+                    type="date"
+                    id="todoDate"
+                >
+            </div>
+
+
+            <!-- 제목 -->
+            <div class="form-row">
+                <label for="todoTitle">제목</label>
+
+                <input
+                    type="text"
+                    id="todoTitle"
+                    placeholder="제목 입력"
+                >
+            </div>
+
+
+            <!-- 내용 -->
+            <div class="form-row">
+                <label for="todoContent">내용</label>
+
+                <textarea
+                    id="todoContent"
+                    placeholder="내용 입력"
+                ></textarea>
+            </div>
+
+
+            <!-- 등록 / 수정 완료 -->
+            <button
+                type="button"
+                id="addButton"
+            >
+                등록하기
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             필터
+        ========================== -->
+        <section class="filter-area">
+
+            <button
+                type="button"
+                class="filter-button active"
+                data-filter="all"
+            >
+                전체
+            </button>
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="active"
+            >
+                진행중
+            </button>
+
+            <button
+                type="button"
+                class="filter-button"
+                data-filter="completed"
+            >
+                완료
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             남은 할 일 + 날짜 정렬
+        ========================== -->
+        <section class="status-area">
+
+            <!-- 왼쪽 -->
+            <span id="todoCount">
+                남은 할 일: 0개
+            </span>
+
+
+            <!-- 오른쪽 -->
+            <div class="sort-area">
+
+                <label for="sortSelect">
+                    날짜 정렬
+                </label>
+
+                <select id="sortSelect">
+
+                    <option value="asc">
+                        날짜 빠른순
+                    </option>
+
+                    <option value="desc">
+                        날짜 늦은순
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Todo 목록
+        ========================== -->
+        <section id="todoList"></section>
+
+    </main>
+
+</body>
+
+</html>

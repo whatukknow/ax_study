@@ -1,0 +1,489 @@
+/* ==================================
+   기본 설정
+================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+
+    background-color: #f5f5f5;
+
+    font-family: Arial, sans-serif;
+
+    color: #333;
+}
+
+
+/* ==================================
+   전체 컨테이너
+================================== */
+
+.container {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+}
+
+
+/* ==================================
+   상단 Header
+================================== */
+
+.header {
+    padding: 18px 25px;
+
+    background-color: #1976d2;
+
+    color: white;
+}
+
+
+.header h1 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+
+/* ==================================
+   Todo 입력 영역
+================================== */
+
+.todo-form {
+    padding: 30px;
+}
+
+
+.form-row {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.form-row label {
+    width: 100px;
+
+    font-weight: bold;
+}
+
+
+.form-row input,
+.form-row textarea {
+    flex: 1;
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+.form-row textarea {
+    height: 100px;
+
+    resize: vertical;
+}
+
+
+/* ==================================
+   등록 버튼
+================================== */
+
+#addButton {
+    display: block;
+
+    width: 350px;
+    max-width: 100%;
+
+    margin: 30px auto 0;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #1976d2;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+#addButton:hover {
+    background-color: #1565c0;
+}
+
+
+/* 수정 중 */
+
+#addButton.editing {
+    background-color: #ff9800;
+}
+
+
+#addButton.editing:hover {
+    background-color: #e68900;
+}
+
+
+/* ==================================
+   필터 영역
+================================== */
+
+.filter-area {
+    display: flex;
+
+    gap: 5px;
+
+    padding: 0 30px;
+}
+
+
+.filter-button {
+    flex: 1;
+
+    padding: 11px;
+
+    border: 1px solid #ddd;
+
+    background-color: white;
+
+    color: #333;
+
+    cursor: pointer;
+}
+
+
+.filter-button:hover {
+    background-color: #f1f1f1;
+}
+
+
+.filter-button.active {
+    border-color: #1976d2;
+
+    background-color: #1976d2;
+
+    color: white;
+}
+
+
+/* ==================================
+   남은 할 일 + 날짜 정렬
+================================== */
+
+.status-area {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 30px;
+}
+
+
+/* 남은 할 일 */
+
+#todoCount {
+    font-weight: bold;
+}
+
+
+/* 날짜 정렬 */
+
+.sort-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.sort-area label {
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+#sortSelect {
+    padding: 8px 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+
+/* ==================================
+   Todo 목록
+================================== */
+
+#todoList {
+    padding: 0 30px 30px;
+}
+
+
+.todo-item {
+    padding: 25px 0;
+
+    border-top: 1px solid #ddd;
+}
+
+
+/* ==================================
+   Todo 상단
+================================== */
+
+.todo-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+/* 체크박스 */
+
+.todo-checkbox {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+
+/* 날짜 */
+
+.todo-date {
+    color: #198754;
+
+    font-weight: bold;
+}
+
+
+/* 제목 */
+
+.todo-title {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    word-break: break-word;
+}
+
+
+/* 내용 */
+
+.todo-content {
+    min-height: 70px;
+
+    padding: 10px;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+}
+
+
+/* ==================================
+   완료된 Todo
+================================== */
+
+/*
+   완료 Todo는 숨기지 않는다.
+
+   전체 목록에서는 체크된 상태로
+   그대로 화면에 표시한다.
+*/
+
+.todo-item.completed .todo-title,
+.todo-item.completed .todo-content {
+    color: #999;
+
+    text-decoration: line-through;
+}
+
+
+.todo-item.completed .todo-date {
+    opacity: 0.65;
+}
+
+
+/* ==================================
+   수정 / 삭제 버튼
+================================== */
+
+.button-area {
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 15px;
+}
+
+
+.delete-button,
+.edit-button {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 2px;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* 삭제 */
+
+.delete-button {
+    background-color: #e53935;
+}
+
+
+.delete-button:hover {
+    background-color: #c62828;
+}
+
+
+/* 수정 */
+
+.edit-button {
+    background-color: #1976d2;
+}
+
+
+.edit-button:hover {
+    background-color: #1565c0;
+}
+
+
+/* ==================================
+   Todo가 없을 때
+================================== */
+
+.empty-message {
+    margin: 0;
+
+    padding: 40px 10px;
+
+    border-top: 1px solid #ddd;
+
+    color: #999;
+
+    text-align: center;
+}
+
+
+/* ==================================
+   모바일
+================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 0;
+    }
+
+
+    .container {
+        border: none;
+    }
+
+
+    .todo-form {
+        padding: 20px;
+    }
+
+
+    .form-row {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+
+    .form-row label {
+        width: auto;
+    }
+
+
+    #addButton {
+        width: 100%;
+    }
+
+
+    .filter-area {
+        padding: 0 20px;
+    }
+
+
+    .status-area {
+        padding: 20px;
+
+        gap: 15px;
+    }
+
+
+    .sort-area {
+        gap: 5px;
+    }
+
+
+    #sortSelect {
+        padding: 7px;
+    }
+
+
+    #todoList {
+        padding: 0 20px 20px;
+    }
+
+
+    .todo-top {
+        flex-wrap: wrap;
+    }
+}

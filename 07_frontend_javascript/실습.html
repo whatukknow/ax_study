@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>브라우저 정보 확인</title>
+</head>
+<body>
+
+    <button id="checkButton">브라우저 정보 확인</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const checkButton = document.getElementById("checkButton");
+
+            checkButton.addEventListener("click", function () {
+
+                const language = navigator.language;
+                const screenWidth = screen.width;
+
+                alert(
+                    "브라우저 기본 언어: " + language +
+                    "\n화면 전체 가로 크기: " + screenWidth + "px"
+                );
+            });
+
+        });
+    </script>
+
+</body>
+</html>

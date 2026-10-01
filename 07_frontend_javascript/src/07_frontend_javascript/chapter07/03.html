@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            padding: 150px;
+            background-color: gray;
+        }
+
+        .box2{
+            background-color: orange;
+        }
+
+        .box3{
+            background-color: black;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(){
+            const boxEl = document.querySelector(".box1");
+            const boxEl2 = document.querySelector(".box2");
+            const boxEl3 = document.querySelector(".box3");
+
+            boxEl.addEventListener("click", function(e){
+                console.log("box1 클릭");
+            });
+
+            boxEl2.addEventListener("click", function(e){
+                console.log("box2 클릭");
+            }, true); // 캡쳐링 단계에서 이벤트 전파
+
+
+            boxEl3.addEventListener("click", function(e){
+                console.log("box3 클릭");
+                console.log(e);
+                //e.stopPorpagation(); // 이벤트 전파 중지
+                e.stopPorpagationImmediate(); // 이벤트 전파 중지 + 같은 이벤트 리스너 실행 중지
+            });
+
+
+            boxEl.addEventListener("click", function(e){
+                console.log("box1 클릭2!");
+            });
+
+            boxEl2.addEventListener("click", function(e){
+                console.log("box2 클릭2!");
+            });
+
+            boxEl3.addEventListener("click", function(e){
+                console.log("box3 클릭2!");
+            });
+
+        });
+
+    </script>    
+    <div class="box box1">
+        <div class="box box2">
+            <div class="box box3"></div>
+        
+        </div>
+    </div>
+
+</body>
+</html>
