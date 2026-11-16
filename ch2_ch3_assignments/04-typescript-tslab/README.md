@@ -60,6 +60,8 @@ Get-ChildItem -Force | Where-Object { $_.Name -notin @(".venv", ".ipynb_checkpoi
 zip 안에 `pyproject.toml`, `uv.lock`, `01_data_modeling.ipynb`, `02_generics_typeguard.ipynb`, `README.md` 가 들어 있고
 `.venv` 폴더는 없는지 확인합니다.
 
+📦 제출용 zip: [04-typescript-tslab.zip](../04-typescript-tslab.zip) (위 명령으로 만든 파일, `.venv`·`.git` 제외)
+
 ## 4. 요구사항 → 구현 매핑
 
 | 요구사항 | 구현 위치 | 핵심 포인트 |
