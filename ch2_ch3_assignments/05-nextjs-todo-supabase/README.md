@@ -2,7 +2,7 @@
 
 프론트엔드 응용(React/Next.js) 과제 — 회원가입/로그인한 사용자가 **자기 할 일만** 관리하는 Todo 앱입니다.
 
-- 배포 URL: `https://<배포 후 Vercel 주소 입력>.vercel.app`
+- 배포 URL: https://ax-study-eight.vercel.app
 - GitHub: `https://github.com/<아이디>/<저장소 이름>`
 
 ## 1. 주요 기능
