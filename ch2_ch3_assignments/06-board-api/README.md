@@ -3,8 +3,8 @@
 FastAPI + SQLAlchemy 2.0(비동기) + PostgreSQL(Supabase) + JWT 로 만든 RESTful 게시판 API 입니다.
 회원가입/로그인, 게시글 CRUD, 작성자 검증(본인만 수정, 본인 또는 관리자만 삭제), 공통 에러 스키마, Swagger 문서를 제공하며 AWS EC2 에 배포합니다.
 
-- 배포 주소: `http://<EC2_퍼블릭_IP>/`  ← 배포 후 채우기
-- Swagger UI: `http://<EC2_퍼블릭_IP>/docs`  ← 배포 후 채우기
+- 배포 주소: http://13.125.160.106/ (AWS EC2 서울, nginx → uvicorn)
+- Swagger UI: http://13.125.160.106/docs
 - GitHub: `<레포 주소>`  ← 채우기
 
 ## 1. 기술 스택
@@ -252,4 +252,5 @@ curl "http://127.0.0.1:8000/posts?page=1&size=10"
 ### 검증 실패(제목이 공백뿐) → 422 `VALIDATION_ERROR`
 ![검증 실패 422](images/post_create_422.png)
 
-- [ ] EC2 배포 주소에서 /docs 접속 화면
+### EC2 배포 주소에서 /docs 접속
+![EC2 Swagger](images/ec2_docs.png)
