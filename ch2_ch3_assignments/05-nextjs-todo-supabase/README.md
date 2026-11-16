@@ -3,7 +3,7 @@
 프론트엔드 응용(React/Next.js) 과제 — 회원가입/로그인한 사용자가 **자기 할 일만** 관리하는 Todo 앱입니다.
 
 - 배포 URL: https://ax-study-eight.vercel.app
-- GitHub: `https://github.com/<아이디>/<저장소 이름>`
+- GitHub: https://github.com/whatukknow/ax_study/tree/main/ch2_ch3_assignments/05-nextjs-todo-supabase
 
 ## 1. 주요 기능
 

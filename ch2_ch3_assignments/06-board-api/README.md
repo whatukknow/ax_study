@@ -5,7 +5,7 @@ FastAPI + SQLAlchemy 2.0(비동기) + PostgreSQL(Supabase) + JWT 로 만든 REST
 
 - 배포 주소: http://13.125.160.106/ (AWS EC2 서울, nginx → uvicorn)
 - Swagger UI: http://13.125.160.106/docs
-- GitHub: `<레포 주소>`  ← 채우기
+- GitHub: https://github.com/whatukknow/ax_study/tree/main/ch2_ch3_assignments/06-board-api
 
 ## 1. 기술 스택
 
@@ -238,7 +238,7 @@ curl "http://127.0.0.1:8000/posts?page=1&size=10"
 
 코드 수정 후 재배포: `git pull && uv sync && sudo systemctl restart board-api`
 
-## 10. 스크린샷 (제출 전 채우기)
+## 10. 스크린샷
 
 ### Swagger 전체 화면
 ![Swagger 전체 화면](images/swagger_overview.png)
