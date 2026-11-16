@@ -136,12 +136,12 @@ Next.js 16 (App Router, `src/` 없음) · React 19 · TypeScript · Tailwind CSS
 
 | 화면 | 캡처 |
 |---|---|
-| 로그인 | `![로그인](./docs/screenshots/login.png)` |
-| 회원가입 | `![회원가입](./docs/screenshots/signup.png)` |
-| 목록 (성공) | `![목록](./docs/screenshots/todos.png)` |
-| 빈 목록 | `![빈 목록](./docs/screenshots/empty.png)` |
-| 로딩 | `![로딩](./docs/screenshots/loading.png)` |
-| 상세 | `![상세](./docs/screenshots/detail.png)` |
-| 비로그인 접근 시 /login 이동 | `![가드](./docs/screenshots/guard.png)` |
+| 로그인 | ![로그인](./docs/screenshots/login.png) |
+| 회원가입 | ![회원가입](./docs/screenshots/signup.png) |
+| 목록 (성공) | ![목록](./docs/screenshots/todos.png) |
+| 빈 목록 | ![빈 목록](./docs/screenshots/empty.png) |
+| 로딩 | (데이터가 빨리 와서 로딩 화면이 거의 보이지 않아 캡처 생략 · `app/todos/loading.tsx` 참고) |
+| 상세 | ![상세](./docs/screenshots/detail.png) |
+| 비로그인 접근 시 /login 이동 | ![가드](./docs/screenshots/guard.png) |
 
-> 캡처 후 `docs/screenshots/` 폴더에 저장하고 위 표의 코드 표기를 실제 이미지 문법으로 바꿔 주세요.
+> 화면 위쪽의 로그인 이메일은 공개 저장소용으로 "(이메일 가림)" 처리했습니다.

@@ -240,8 +240,16 @@ curl "http://127.0.0.1:8000/posts?page=1&size=10"
 
 ## 10. 스크린샷 (제출 전 채우기)
 
-- [ ] Swagger 전체 화면
-- [ ] Authorize 후 글 작성 201
-- [ ] 다른 사용자 수정 시도 403 에러 스키마
-- [ ] 검증 실패 422 에러 스키마
+### Swagger 전체 화면
+![Swagger 전체 화면](images/swagger_overview.png)
+
+### Authorize(user1) 후 글 작성 → 201
+![글 작성 201](images/post_create_201.png)
+
+### 다른 사용자(user2)가 user1 의 글 수정 시도 → 403 `NOT_POST_AUTHOR`
+![수정 403](images/post_update_403.png)
+
+### 검증 실패(제목이 공백뿐) → 422 `VALIDATION_ERROR`
+![검증 실패 422](images/post_create_422.png)
+
 - [ ] EC2 배포 주소에서 /docs 접속 화면
