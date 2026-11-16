@@ -1,0 +1,10 @@
+[project]
+name = "db-ai-shop"
+version = "0.1.0"
+description = "Supabase(PostgreSQL) + Python SDK로 만드는 회원/상품/주문 쇼핑몰 DB 과제"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "python-dotenv>=1.2.4",
+    "supabase>=2.34.1",
+]

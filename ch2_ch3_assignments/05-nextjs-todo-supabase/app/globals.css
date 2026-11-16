@@ -1,0 +1,8 @@
+/* Tailwind CSS v4: 이 한 줄로 모든 유틸리티 클래스를 불러온다 */
+@import 'tailwindcss';
+
+/* 전체 배경색과 글자색 */
+body {
+  background-color: #f9fafb;
+  color: #111827;
+}

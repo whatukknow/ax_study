@@ -1,0 +1,19 @@
+[project]
+name = "04-typescript-tslab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "whatuknow", email = "csong1501@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "jupyter>=1.1.1",
+]
+
+[project.scripts]
+04-typescript-tslab = "04_typescript_tslab:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"

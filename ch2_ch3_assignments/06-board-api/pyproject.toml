@@ -1,0 +1,22 @@
+[project]
+name = "board-api"
+version = "0.1.0"
+description = "RESTful 게시판 API (FastAPI + SQLAlchemy async + JWT)"
+readme = "README.md"
+authors = [
+    { name = "whatuknow", email = "csong1501@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "asyncpg>=0.32.0",
+    "bcrypt==4.0.1",
+    "fastapi>=0.163.1",
+    "greenlet>=3.5.6",
+    "passlib>=1.7.4",
+    "pydantic>=2.14.3",
+    "pyjwt>=2.15.1",
+    "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.33",
+    "sqlalchemy>=2.1.8",
+    "uvicorn>=0.54.0",
+]

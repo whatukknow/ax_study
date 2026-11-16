@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 한글 인코딩 + 모바일 화면 맞춤 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>일정 관리 Todo</title>
+
+    <!-- 외부 CSS 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- defer: HTML을 모두 읽은 뒤에 JS 실행 → JS에서 요소를 바로 찾을 수 있음 -->
+    <script src="js/todo.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- =========================
+             1. 상단 제목 + 남은 일 개수
+        ========================== -->
+        <header class="app-header">
+            <h1>나의 일정 관리</h1>
+
+            <!-- JS가 개수를 계산해서 글자를 바꿔 넣는 자리 -->
+            <p id="todoCount" class="todo-count">전체 0개 · 남은 일 0개 · 완료 0개</p>
+        </header>
+
+
+        <!-- =========================
+             2. 일정 추가 폼
+             form의 submit 이벤트를 사용 → Enter 키로도 등록 가능
+        ========================== -->
+        <section class="add-section">
+            <h2>일정 추가</h2>
+
+            <form id="todoForm" class="todo-form">
+
+                <div class="form-row">
+                    <label for="todoTitle">할 일</label>
+                    <input type="text" id="todoTitle" placeholder="예) 과제 제출하기" maxlength="50">
+                </div>
+
+                <div class="form-row">
+                    <label for="todoDate">날짜</label>
+                    <input type="date" id="todoDate">
+                </div>
+
+                <button type="submit" class="btn btn-primary">추가</button>
+
+            </form>
+
+            <!-- 입력 오류 메시지가 표시되는 자리 (처음엔 비어 있음) -->
+            <p id="errorMessage" class="error-message"></p>
+        </section>
+
+
+        <!-- =========================
+             3. 조회 영역 (필터 + 검색)
+        ========================== -->
+        <section class="list-section">
+            <h2>일정 목록</h2>
+
+            <div class="toolbar">
+
+                <!-- 필터 버튼: data-filter 값으로 어떤 필터인지 구분 -->
+                <div id="filterArea" class="filter-area">
+                    <button type="button" class="filter-btn active" data-filter="all">전체</button>
+                    <button type="button" class="filter-btn" data-filter="active">진행중</button>
+                    <button type="button" class="filter-btn" data-filter="completed">완료</button>
+                </div>
+
+                <!-- 검색: 입력할 때마다 목록이 걸러짐 -->
+                <div class="search-area">
+                    <label for="searchInput">검색</label>
+                    <input type="search" id="searchInput" placeholder="제목으로 검색">
+                </div>
+
+            </div>
+
+            <!-- =========================
+                 4. 일정 목록
+                 JS의 render() 함수가 todos 배열을 보고 li를 만들어 넣음
+            ========================== -->
+            <ul id="todoList" class="todo-list"></ul>
+
+            <!-- 완료된 일정 한 번에 지우기 -->
+            <button type="button" id="clearCompletedBtn" class="btn btn-outline clear-btn">완료된 일정 모두 삭제</button>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

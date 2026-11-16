@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!-- lang="ko": 화면 낭독기(스크린 리더)가 한국어로 읽도록 문서 언어를 지정 -->
+<html lang="ko">
+
+<head>
+    <!-- 한글이 깨지지 않도록 문자 인코딩 지정 -->
+    <meta charset="UTF-8">
+
+    <!-- 모바일에서 화면 폭에 맞게 보이도록 설정 (반응형 필수) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MOA MALL - 모아몰 쇼핑몰</title>
+
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         1. 헤더 영역 (로고 + 내비게이션 + 검색)
+    ========================================== -->
+    <header class="site-header">
+
+        <!-- .container: 내용 최대 너비를 제한하고 가운데 정렬하는 공통 클래스 -->
+        <div class="container header-inner">
+
+            <!-- 사이트 로고: 페이지에서 가장 중요한 제목이므로 h1 사용 -->
+            <h1 class="logo">
+                <a href="index.html">MOA<span>MALL</span></a>
+            </h1>
+
+            <!-- 주 메뉴: nav > ul > li > a 구조 -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#category">카테고리</a></li>
+                    <li><a href="#best">베스트</a></li>
+                    <li><a href="#event">이벤트</a></li>
+                    <li><a href="#newsletter">고객센터</a></li>
+                </ul>
+            </nav>
+
+            <!-- 검색 폼: label과 input을 for/id로 연결 -->
+            <form class="search-form" action="#" method="get">
+                <label for="searchKeyword" class="search-label">상품 검색</label>
+                <input type="search" id="searchKeyword" name="keyword" placeholder="찾으시는 상품을 입력하세요">
+                <button type="submit" class="btn btn-primary">검색</button>
+            </form>
+
+        </div>
+    </header>
+
+
+    <!-- =========================================
+         2. 메인 영역
+    ========================================== -->
+    <main>
+
+        <!-- -----------------------------------------
+             2-1. 히어로 배너
+        ------------------------------------------ -->
+        <section class="hero" id="hero">
+            <div class="container hero-inner">
+
+                <!-- 왼쪽: 문구 -->
+                <div class="hero-text">
+                    <p class="hero-badge">WINTER SALE</p>
+                    <h2>겨울 시즌 오프<br>최대 50% 할인</h2>
+                    <p>따뜻한 겨울 준비, 모아몰에서 한 번에 모아 보세요.</p>
+                    <a href="#best" class="btn btn-primary">지금 쇼핑하기</a>
+                </div>
+
+                <!-- 오른쪽: 이미지 (alt로 이미지 내용을 설명) -->
+                <div class="hero-image">
+                    <img src="images/hero.svg" alt="주황색 MOA 쇼핑백 일러스트">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------
+             2-2. 카테고리 목록
+        ------------------------------------------ -->
+        <section class="category" id="category">
+            <div class="container">
+
+                <!-- .section-title: 모든 섹션 제목에 같은 스타일을 주는 공통 클래스 -->
+                <h2 class="section-title">카테고리</h2>
+
+                <ul class="category-list">
+                    <li><a href="#best"><span class="category-icon">👕</span>패션</a></li>
+                    <li><a href="#best"><span class="category-icon">💄</span>뷰티</a></li>
+                    <li><a href="#best"><span class="category-icon">🍎</span>식품</a></li>
+                    <li><a href="#best"><span class="category-icon">🏠</span>리빙</a></li>
+                    <li><a href="#best"><span class="category-icon">💻</span>디지털</a></li>
+                    <li><a href="#best"><span class="category-icon">⚽</span>스포츠</a></li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------
+             2-3. 베스트 상품 (카드 그리드)
+             각 상품은 독립적인 내용이므로 article 사용
+        ------------------------------------------ -->
+        <section class="best" id="best">
+            <div class="container">
+
+                <h2 class="section-title">이번 주 베스트</h2>
+
+                <!-- product-grid: Grid로 1열 → 2열 → 4열 배치 -->
+                <div class="product-grid">
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/ffe7ba/873800?text=Padding" alt="베이지색 롱패딩 상품 사진">
+                        <div class="card-body">
+                            <h3>데일리 롱패딩</h3>
+                            <p class="price"><strong>89,000원</strong> <del>129,000원</del></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/d6e4ff/10239e?text=Knit" alt="파란색 니트 스웨터 상품 사진">
+                        <div class="card-body">
+                            <h3>울 블렌드 니트</h3>
+                            <p class="price"><strong>39,000원</strong> <del>49,000원</del></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/d9f7be/135200?text=Tumbler" alt="초록색 보온 텀블러 상품 사진">
+                        <div class="card-body">
+                            <h3>보온 텀블러 500ml</h3>
+                            <p class="price"><strong>15,900원</strong></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/fff1f0/a8071a?text=Muffler" alt="빨간색 체크 머플러 상품 사진">
+                        <div class="card-body">
+                            <h3>체크 머플러</h3>
+                            <p class="price"><strong>19,800원</strong> <del>25,000원</del></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/f9f0ff/391085?text=Earphone" alt="보라색 무선 이어폰 상품 사진">
+                        <div class="card-body">
+                            <h3>무선 이어폰</h3>
+                            <p class="price"><strong>59,000원</strong></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/e6fffb/00474f?text=Blanket" alt="민트색 극세사 담요 상품 사진">
+                        <div class="card-body">
+                            <h3>극세사 담요</h3>
+                            <p class="price"><strong>22,000원</strong> <del>30,000원</del></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/fffbe6/614700?text=Candle" alt="노란색 향초 상품 사진">
+                        <div class="card-body">
+                            <h3>우드윅 향초</h3>
+                            <p class="price"><strong>12,500원</strong></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/400x300/f0f0f0/262626?text=Sneakers" alt="회색 운동화 상품 사진">
+                        <div class="card-body">
+                            <h3>쿠션 러닝화</h3>
+                            <p class="price"><strong>69,000원</strong> <del>89,000원</del></p>
+                            <a href="#" class="btn btn-outline">장바구니 담기</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------
+             2-4. 이벤트 / 혜택
+        ------------------------------------------ -->
+        <section class="event" id="event">
+            <div class="container">
+
+                <h2 class="section-title">이벤트 &amp; 혜택</h2>
+
+                <div class="event-list">
+
+                    <!-- event-main: 큰 이벤트 카드 (데스크톱에서 grid-column span으로 2칸 차지) -->
+                    <article class="event-item event-main">
+                        <h3>신규 회원 첫 구매 20% 쿠폰</h3>
+                        <p>회원가입만 해도 바로 쓸 수 있는 할인 쿠폰을 드려요.</p>
+                    </article>
+
+                    <article class="event-item">
+                        <h3>무료 배송</h3>
+                        <p>3만 원 이상 구매 시 전 상품 무료 배송</p>
+                    </article>
+
+                    <article class="event-item">
+                        <h3>적립금 2배</h3>
+                        <p>매주 금요일, 모든 구매 적립금 2배</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------
+             2-5. 뉴스레터 / 문의 폼
+             모든 입력 요소에 label을 for/id로 연결 (접근성)
+        ------------------------------------------ -->
+        <section class="newsletter" id="newsletter">
+            <div class="container">
+
+                <h2 class="section-title">소식 받기 &amp; 문의하기</h2>
+
+                <form class="contact-form" action="#" method="post">
+
+                    <div class="form-row">
+                        <label for="userName">이름</label>
+                        <input type="text" id="userName" name="userName" placeholder="홍길동" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="userEmail">이메일</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="moa@example.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="userPhone">연락처</label>
+                        <input type="tel" id="userPhone" name="userPhone" placeholder="010-0000-0000">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="inquiryType">문의 유형</label>
+                        <select id="inquiryType" name="inquiryType">
+                            <option value="newsletter">뉴스레터 구독</option>
+                            <option value="order">주문/배송 문의</option>
+                            <option value="return">교환/반품 문의</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </div>
+
+                    <!-- full: 태블릿 이상에서 2칸을 모두 차지하는 줄 -->
+                    <div class="form-row full">
+                        <label for="message">문의 내용</label>
+                        <textarea id="message" name="message" rows="4" placeholder="궁금한 점을 남겨 주세요"></textarea>
+                    </div>
+
+                    <!-- 체크박스는 label로 감싸는 방식으로 연결 -->
+                    <div class="form-row full">
+                        <label class="check-label">
+                            <input type="checkbox" name="agree" required>
+                            개인정보 수집 및 이용에 동의합니다.
+                        </label>
+                    </div>
+
+                    <div class="form-row full form-buttons">
+                        <button type="reset" class="btn btn-outline">다시 쓰기</button>
+                        <button type="submit" class="btn btn-primary">보내기</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         3. 사이드 영역 (부가 정보: 고객센터 안내)
+         본문과 직접 관련이 적은 보조 정보이므로 aside 사용
+    ========================================== -->
+    <aside class="side-info">
+        <div class="container">
+            <h2>고객센터 1588-0000</h2>
+            <p>평일 09:00 ~ 18:00 (점심 12:00 ~ 13:00, 주말·공휴일 휴무)</p>
+        </div>
+    </aside>
+
+
+    <!-- =========================================
+         4. 푸터 영역
+    ========================================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <!-- 회사 정보: address 태그로 연락처 정보 표시 (가상의 정보) -->
+            <div class="footer-info">
+                <p class="footer-logo">MOA MALL</p>
+                <address>
+                    (주)모아몰 | 대표: 김모아 | 서울특별시 가상구 모아로 123<br>
+                    이메일: <a href="mailto:help@moamall.example">help@moamall.example</a>
+                </address>
+            </div>
+
+            <!-- 푸터 링크 목록 -->
+            <ul class="footer-links">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#">입점 문의</a></li>
+            </ul>
+
+        </div>
+
+        <!-- &copy; : 저작권 기호(©)를 표시하는 HTML 문자 참조 -->
+        <p class="copyright">&copy; 2026 MOA MALL. All rights reserved. (학습용 가상 쇼핑몰)</p>
+    </footer>
+
+</body>
+
+</html>
